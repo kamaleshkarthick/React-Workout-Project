@@ -1,0 +1,30 @@
+/* *{
+  box-sizing: border-box;
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav{
+  width: 100vw;
+  height: 80px;
+  color: white;
+  background-color: black;
+  display: flex;
+  padding: 20px 80px ;
+  justify-content: space-between;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.nav-item1{
+  display: flex;
+  
+align-items: center;
+}
+.nav-item1 *{
+  margin-right: 16px;
+  font-weight: 100;
+}
+.nav-item2{
+  display: flex;
+} */
