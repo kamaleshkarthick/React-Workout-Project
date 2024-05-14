@@ -10,5 +10,11 @@
       font-family: 'Neue Montreal';
       src: url(../public/font/NeueMontreal-Regular.ttf) ;
     }
+    /* @font-face {
+      font-family: 'Founders Grotesk';
+      src: url(../public/font/FoundersGrotesk/*) ;
+
+      
+    } */
    
   }
