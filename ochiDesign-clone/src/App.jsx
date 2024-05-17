@@ -3,16 +3,18 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import LandingPage from './components/LandingPage'
 import Marquee from './components/Marquee'
+import About from './components/About'
 
 function App() {
   
 
   return (
     <>
-      <div className={` w-full h-screen bg-[#040404] text-white `}>
+      <div className={` w-full min-h-screen bg-[#000000] text-white `}>
         <Navbar />
         <LandingPage />
-        <Marquee/>
+        <Marquee />
+        <About/>
       </div>
      
     </>
