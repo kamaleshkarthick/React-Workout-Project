@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
+  motion
   return (
     <>
-      <div className="w-full h-full bg-zinc-900 pt-[1px] ">
+      <div className="w-full h-screen bg-zinc-900 pt-[1px] ">
         <div className="textstructure pt-56 pb-24 px-20 ">
           {["We create", "Eye-Opening", "Presentations"].map((item, i) => {
             return (
@@ -13,7 +15,7 @@ const LandingPage = () => {
               <div className="masker  " key={i}  >
                 <div className=" w-fit flex items-end overflow-hidden ">
                   {i === 1 && (
-                    <div className=" mr-5 w-[8vw] rounded-md h-[5.4vw] bottom-3 relative bg-green-500"></div>
+                    <motion.div initial={{width:0}} animate={{width:"8vw"}} className=" mr-5 w-[8vw] rounded-md h-[5.4vw] bottom-3 relative bg-green-500"></motion.div>
                     )}
                 <h1 className=" pt-[2vw] -mb-[1vw]  uppercase text-[8vw] leading-[.75]  font-FoundersGrotesk  font-semibold ">
                   {item}

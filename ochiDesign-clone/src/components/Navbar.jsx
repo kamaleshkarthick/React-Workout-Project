@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className=" fixed z-30 w-screen px-20 py-8 font-NeueMontreal flex justify-between items-center bg-blur-xl">
+      <div className=" fixed z-30 w-full px-20 py-8 font-NeueMontreal flex justify-between items-center backdrop-blur-sm">
         <div className="logo">
           <svg
             width="72"
@@ -41,8 +41,6 @@ const Navbar = () => {
           ))}
 
           </div>
-
-
 
 
       </div>

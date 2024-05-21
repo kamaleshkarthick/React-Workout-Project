@@ -7,9 +7,13 @@ import About from './components/About'
 import Eyes from './components/Eyes'
 import Freatured from './components/Freatured'
 import Cards from './components/Cards'
+import Footer from './components/Footer'
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
-  
+
+const locomotiveScroll = new LocomotiveScroll();
+
 
   return (
     <>
@@ -20,7 +24,8 @@ function App() {
         <About />
         <Eyes />
         <Freatured />
-        <Cards/>
+        <Cards />
+        <Footer/>
       </div>
      
     </>
