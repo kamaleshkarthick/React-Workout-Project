@@ -7,7 +7,7 @@ const LandingPage = () => {
   motion
   return (
     <>
-      <div className="w-full h-screen bg-zinc-900 pt-[1px] ">
+      <div  data-scroll data-scroll-section data-scroll-speed="-.3" className="w-full h-screen bg-zinc-900 pt-[1px] ">
         <div className="textstructure pt-56 pb-24 px-20 ">
           {["We create", "Eye-Opening", "Presentations"].map((item, i) => {
             return (
@@ -15,7 +15,7 @@ const LandingPage = () => {
               <div className="masker  " key={i}  >
                 <div className=" w-fit flex items-end overflow-hidden ">
                   {i === 1 && (
-                    <motion.div initial={{width:0}} animate={{width:"8vw"}} className=" mr-5 w-[8vw] rounded-md h-[5.4vw] bottom-3 relative bg-green-500"></motion.div>
+                    <motion.div initial={{width:0}} animate={{width:"8vw"}} transition={{ease:[0.76, 0, 0.24, 1]}} className=" mr-5 w-[8vw] rounded-md h-[5.4vw] bottom-3 relative bg-green-500"></motion.div>
                     )}
                 <h1 className=" pt-[2vw] -mb-[1vw]  uppercase text-[8vw] leading-[.75]  font-FoundersGrotesk  font-semibold ">
                   {item}
