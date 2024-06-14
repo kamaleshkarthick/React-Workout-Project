@@ -1,11 +1,16 @@
 /* eslint-disable no-unused-vars */
-import { motion } from "framer-motion";
-import { Power4 } from "gsap/all";
-import React, { useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+// import { Power4 } from "gsap/all";
 
 const Freatured = () => {
-  const [ishover, setHover] = useState(false);
-  // console.log(useState());
+  const cards = [useAnimation(), useAnimation()];
+
+  const handleHover = (i) => {
+    cards[i].start({y:"0"})
+  }
+  const handleHoverEnd = (i) => {
+    cards[i].start({y:"100%"})
+  }
 
   return (
     <>
@@ -17,17 +22,15 @@ const Freatured = () => {
         </div>
         <div className=" px-20">
           <div className=" card w-full flex gap-10 mt-10">
-            <div
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-              className=" cardcontainer relative w-1/2 h-[75vh] "
-            >
+            <motion.div onHoverStart={() => handleHover(0)}
+              onHoverEnd={()=> handleHoverEnd(0)}
+              className=" cardcontainer relative w-1/2 h-[75vh] " >
               <h1 className="  flex absolute font-NeueMontreal text-8xl text-[#cdea68] left-full -translate-x-1/2 top-1/2 -translate-y-1/2  overflow-hidden z-10">
                 {"FYDE".split("").map((item, i) => (
                   <motion.span
                     initial={{ y: "100%" }}
-                    animate={ishover ? { y: "0" } : { y: "100%" }}
-                    transition={{ ease: Power4.easeInOut, delay: i * 0.1 }}
+                    animate={ cards[0]}
+                    transition={{ ease: [0.25, 1, 0.5, 1], delay: i * 0.1 }}
                     className=" inline-block "
                     key={i}
                   >
@@ -42,25 +45,22 @@ const Freatured = () => {
                   alt="img"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            <div
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-              className=" cardcontainer relative w-1/2 h-[75vh] "
-            >
+            <motion.div onHoverStart={() => handleHover(1)}
+              onHoverEnd={()=> handleHoverEnd(1)} className=" cardcontainer relative w-1/2 h-[75vh] " >
               <div className=" card w-full h-full rounded-xl overflow-hidden ">
                 <h1 className="  flex absolute font-NeueMontreal text-8xl text-[#cdea68] right-full translate-x-1/2 top-1/2 -translate-y-1/2 overflow-hidden z-10">
                   {"VIDE".split("").map((item, i) => (
-                    <motion.span
-                      initial={{ y: "100%" }}
-                      animate={ishover ? { y: "0" } : { y: "100%" }}
-                      transition={{ ease: Power4.easeInOut, delay: i * 0.1 }}
-                      className=" inline-block "
-                      key={i}
-                    >
-                      {item}
-                    </motion.span>
+                   <motion.span
+                   initial={{ y: "100%" }}
+                   animate={ cards[1]}
+                   transition={{ ease: [0.25, 1, 0.5, 1], delay: i * 0.1 }}
+                   className=" inline-block "
+                   key={i}
+                 >
+                   {item}
+                 </motion.span>
                   ))}
                 </h1>
                 <img
@@ -69,7 +69,7 @@ const Freatured = () => {
                   alt="img"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
