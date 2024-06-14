@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 
 const Marquee = () => {
   return (
-    <> <div className="bg-[#a3ff9b]">
-      <div data-scroll data-scroll-section data-scroll-speed=".2" className="  w-full  rounded-tl-3xl rounded-tr-3xl py-10 bg-[#004D43]  ">
+    <>
+      {/* <div className="bg-[#a3ff9b]"> */}
+      <div data-scroll data-scroll-section data-scroll-speed=".1" className="  w-full  rounded-tl-3xl rounded-tr-3xl py-10 bg-[#004D43]  ">
         <div className="text border-t-2 border-b-2 border-white flex  overflow-hidden whitespace-nowrap">
           <motion.h1
             initial={{ x: 0 }}
@@ -33,7 +34,7 @@ const Marquee = () => {
           </motion.h1>
         </div>
       </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

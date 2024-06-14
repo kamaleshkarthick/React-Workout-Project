@@ -1,10 +1,10 @@
-// eslint-disable-next-line no-unused-vars
+//eslint-disable-next-line no-unused-vars
 import React from "react";
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
-  motion
+ 
   return (
     <>
       <div  data-scroll data-scroll-section data-scroll-speed="-.3" className="w-full h-screen bg-zinc-900 pt-[1px] ">

@@ -1,7 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import { motion } from "framer-motion";
+import { Power4 } from "gsap/all";
+import React, { useState } from "react";
 
 const Freatured = () => {
+  const [ishover, setHover] = useState(false);
+  // console.log(useState());
+
   return (
     <>
       <div className="w-full py-20">
@@ -12,9 +17,23 @@ const Freatured = () => {
         </div>
         <div className=" px-20">
           <div className=" card w-full flex gap-10 mt-10">
-            <div className=" cardcontainer relative w-1/2 h-[75vh] ">
-              <h1 className=" absolute font-NeueMontreal text-8xl text-[#cdea68] left-full -translate-x-1/2 top-1/2 -translate-y-1/2  overflow-hidden z-10">
-                FYDE
+            <div
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className=" cardcontainer relative w-1/2 h-[75vh] "
+            >
+              <h1 className="  flex absolute font-NeueMontreal text-8xl text-[#cdea68] left-full -translate-x-1/2 top-1/2 -translate-y-1/2  overflow-hidden z-10">
+                {"FYDE".split("").map((item, i) => (
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={ishover ? { y: "0" } : { y: "100%" }}
+                    transition={{ ease: Power4.easeInOut, delay: i * 0.1 }}
+                    className=" inline-block "
+                    key={i}
+                  >
+                    {item}
+                  </motion.span>
+                ))}
               </h1>
               <div className=" card w-full h-full rounded-xl  overflow-hidden">
                 <img
@@ -25,10 +44,24 @@ const Freatured = () => {
               </div>
             </div>
 
-            <div className=" cardcontainer relative w-1/2 h-[75vh] ">
+            <div
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className=" cardcontainer relative w-1/2 h-[75vh] "
+            >
               <div className=" card w-full h-full rounded-xl overflow-hidden ">
-                <h1 className=" absolute font-NeueMontreal text-8xl text-[#cdea68] right-full translate-x-1/2 top-1/2 -translate-y-1/2 overflow-hidden z-10">
-                 VIDE
+                <h1 className="  flex absolute font-NeueMontreal text-8xl text-[#cdea68] right-full translate-x-1/2 top-1/2 -translate-y-1/2 overflow-hidden z-10">
+                  {"VIDE".split("").map((item, i) => (
+                    <motion.span
+                      initial={{ y: "100%" }}
+                      animate={ishover ? { y: "0" } : { y: "100%" }}
+                      transition={{ ease: Power4.easeInOut, delay: i * 0.1 }}
+                      className=" inline-block "
+                      key={i}
+                    >
+                      {item}
+                    </motion.span>
+                  ))}
                 </h1>
                 <img
                   className=" w-full h-full bg-cover "

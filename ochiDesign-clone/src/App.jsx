@@ -17,7 +17,7 @@ const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
-      <div className={` w-full min-h-screen  text-white `}>
+      <div className={` w-full min-h-screen  text-white bg-zinc-900  `}>
         <Navbar />
         <LandingPage />
         <Marquee />
